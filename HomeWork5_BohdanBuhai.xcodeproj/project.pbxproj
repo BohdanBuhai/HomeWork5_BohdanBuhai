@@ -13,6 +13,7 @@
 		47F72D502A24C7E4006698B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F72D4E2A24C7E4006698B9 /* Main.storyboard */; };
 		47F72D522A24C7E5006698B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F72D512A24C7E5006698B9 /* Assets.xcassets */; };
 		47F72D552A24C7E5006698B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F72D532A24C7E5006698B9 /* LaunchScreen.storyboard */; };
+		47F72D5E2A24C979006698B9 /* ExtansionToTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F72D5D2A24C979006698B9 /* ExtansionToTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		47F72D512A24C7E5006698B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47F72D542A24C7E5006698B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47F72D562A24C7E5006698B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47F72D5D2A24C979006698B9 /* ExtansionToTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtansionToTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		47F72D472A24C7E4006698B9 /* HomeWork5_BohdanBuhai */ = {
 			isa = PBXGroup;
 			children = (
+				47F72D5C2A24C945006698B9 /* Extansions */,
 				47F72D482A24C7E4006698B9 /* AppDelegate.swift */,
 				47F72D4A2A24C7E4006698B9 /* SceneDelegate.swift */,
 				47F72D4C2A24C7E4006698B9 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				47F72D562A24C7E5006698B9 /* Info.plist */,
 			);
 			path = HomeWork5_BohdanBuhai;
+			sourceTree = "<group>";
+		};
+		47F72D5C2A24C945006698B9 /* Extansions */ = {
+			isa = PBXGroup;
+			children = (
+				47F72D5D2A24C979006698B9 /* ExtansionToTableView.swift */,
+			);
+			path = Extansions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47F72D5E2A24C979006698B9 /* ExtansionToTableView.swift in Sources */,
 				47F72D4D2A24C7E4006698B9 /* ViewController.swift in Sources */,
 				47F72D492A24C7E4006698B9 /* AppDelegate.swift in Sources */,
 				47F72D4B2A24C7E4006698B9 /* SceneDelegate.swift in Sources */,
