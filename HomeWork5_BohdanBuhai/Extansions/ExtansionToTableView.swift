@@ -7,15 +7,18 @@
 
 import Foundation
 import UIKit
+
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        Base.shared.arrayShoppings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+       
+         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         
-        return cell
+        cell?.textLabel?.text = Base.shared.arrayShoppings[indexPath.row].name
+        return cell ?? UITableViewCell()
     }
     
     
