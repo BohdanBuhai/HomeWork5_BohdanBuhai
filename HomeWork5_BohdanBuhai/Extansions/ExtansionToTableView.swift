@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Base.shared.arrayShoppings.count
     }
@@ -21,5 +22,19 @@ extension ViewController: UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
     
+    func tableView(_: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let delete = UIContextualAction(style: .destructive, title: "Delete", handler: {_,_,_ in
+            print("Delete button tapped......")
+            self.tableView.beginUpdates()
+            Base.shared.arrayShoppings.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            self.tableView.endUpdates()
+        })
+       
+        let swipe = UISwipeActionsConfiguration(actions: [delete])
+        return swipe
+    }
     
 }
+

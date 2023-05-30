@@ -9,23 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
-            self.title = "Shopping Last"
+            tableView.delegate = self
+            self.title = "Shopping List"
             self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
     }
-
+    
     private func saveData(shopp: String) {
         let shopps = Shopping(name: shopp)
         Base.shared.arrayShoppings.append(shopps)
@@ -50,16 +47,10 @@ class ViewController: UIViewController {
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
             print("Cancel button tapped")
         }
-       
-       
-   
         alert.addAction(ok)
         alert.addAction(cancel)
         
         self.present(alert, animated: true, completion: nil)
-        
-        
     }
-  
 }
 
